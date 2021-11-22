@@ -21,9 +21,9 @@ export const authSlice = createSlice({
     [login.pending.type]: (state) => {
       state.isLoading = true;
     },
-    [login.fulfilled.type]: (state, action: PayloadAction<IUser>) => {
+    [login.fulfilled.type]: (state, action: PayloadAction<AuthState>) => {
       state.isLoading = false;
-      state.user = action.payload;
+      state.user = action.payload.user;
       state.error = "";
     },
     [login.rejected.type]: (state, action: PayloadAction<string>) => {

@@ -6,13 +6,14 @@ import ErrorDiv from "../common/error/ErrorDiv";
 import { useAppDispatch } from "hooks/redux";
 import { login } from "store/reducers/ActionCreators";
 import { useAppSelector } from "../../hooks/redux";
+import Router from "next/router";
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
   const { error, isLoading, user } = useAppSelector(
     (state) => state.authReducer
   );
-  // console.log(error);
+
   const [credentials, setCredentials] = useState<ICredentials>({
     email: "",
     password: "",
@@ -28,6 +29,10 @@ const LoginForm = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     dispatch(login(credentials));
+    console.log(user);
+    if (user.id) {
+      Router.push("/student");
+    }
   };
 
   return (
