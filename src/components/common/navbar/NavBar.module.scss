@@ -1,0 +1,12 @@
+.main {
+  display: flex;
+  flex-direction: row;
+
+  li {
+    a {
+      margin: 20px;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

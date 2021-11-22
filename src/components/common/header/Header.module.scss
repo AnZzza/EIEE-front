@@ -1,0 +1,15 @@
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  background-color: rgb(40, 100, 40);
+  color: unset;
+  color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+}
