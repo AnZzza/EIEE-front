@@ -1,35 +1,30 @@
-import React, { FormEventHandler, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import React, { FormEventHandler, SyntheticEvent, useContext } from "react";
+import Link from "next/link";
 import styles from "./NavBar.module.scss";
 import { DISCIPLINE, MATERIALS, SOURCES, LOGIN } from "../../../utils/routes";
-import AuthService from "../../../services/AuthService";
-import { observer } from "mobx-react-lite";
-import Store from "../../../store/store";
-import { Context } from "../../../index";
 
 const NavBar = () => {
-  const { store } = useContext(Context);
-  const handleClick = async (e) => {
+  const handleClick = async (e: SyntheticEvent) => {
     e.preventDefault;
-    const response = store.logout();
+    console.log("It is too early to logout!");
   };
 
   return (
     <ul className={styles.main}>
       <li>
-        <NavLink to={DISCIPLINE}>обучение</NavLink>
+        <Link href={DISCIPLINE}>обучение</Link>
       </li>
       <li>
-        <NavLink to={MATERIALS}>материалы</NavLink>
+        <Link href={MATERIALS}>материалы</Link>
       </li>
       <li>
-        <NavLink to={SOURCES}>ссылки</NavLink>
+        <Link href={SOURCES}>ссылки</Link>
       </li>
       <li onClick={handleClick}>
-        <NavLink to={LOGIN}>выход</NavLink>
+        <Link href={LOGIN}>выход</Link>
       </li>
     </ul>
   );
 };
 
-export default observer(NavBar);
+export default NavBar;
