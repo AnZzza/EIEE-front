@@ -29,10 +29,6 @@ const LoginForm = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
     dispatch(login(credentials));
-    console.log(user);
-    if (user.id) {
-      Router.push("/student");
-    }
   };
 
   return (
@@ -43,7 +39,7 @@ const LoginForm = () => {
       </div>
       <form className={styles.form} onSubmit={handleSubmit}>
         {error && <ErrorDiv mes={error} />}
-        {isLoading && <h1>ЗАГРУЗКА</h1>}
+        {isLoading && <p>ЗАГРУЗКА</p>}
         <BaseInput
           type="text"
           name="email"

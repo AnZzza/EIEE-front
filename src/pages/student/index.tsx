@@ -3,8 +3,9 @@ import Disciplines from "@components/student/disciplines/Disciplines";
 import Layout from "@components/common/layouts/Layout";
 import React, { ReactElement } from "react";
 import styles from "../../styles/Student.module.css";
+import useState from "react";
 
-const index = () => {
+const Student = () => {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -15,8 +16,8 @@ const index = () => {
   );
 };
 
-export default index;
+export default Student;
 
-index.getLayout = function getLayout(page: ReactElement) {
+Student.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>;
 };

@@ -7,8 +7,8 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
   value?: string;
 }
 
-const BaseInput: FC<InputProps> = ({ style, ...rest }) => {
-  return <input {...rest} className={styles.baseInput} required />;
+const BaseInput: FC<InputProps> = ({ type, ...rest }) => {
+  return <input {...rest} type={type} className={styles.baseInput} required />;
 };
 
 export default BaseInput;

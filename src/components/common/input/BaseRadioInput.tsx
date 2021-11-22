@@ -10,14 +10,7 @@ interface InputProps extends HTMLAttributes<HTMLInputElement> {
 const BaseRadioInput: FC<InputProps> = ({ style, id, name, ...rest }) => {
   return (
     <label htmlFor={id}>
-      <input
-        {...rest}
-        id={id}
-        type="radio"
-        name={name}
-        // className={styles.baseInput}
-        required
-      />
+      <input {...rest} id={id} type="radio" name={name} required />
       {id}
     </label>
   );

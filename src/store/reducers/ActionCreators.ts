@@ -19,8 +19,7 @@ export const login = createAsyncThunk(
         console.log(response.message);
         return thunkAPI.rejectWithValue(response.message);
       }
-
-      return response as unknown;
+      return response;
     } catch (error) {
       console.log(error);
       return thunkAPI.rejectWithValue("не удалось выполнить запрос");

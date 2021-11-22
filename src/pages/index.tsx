@@ -2,8 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
-import Login from "../components/login/LoginForm";
 import LoginForm from "../components/login/LoginForm";
+import logo from "../../public/assets/vkLogo.png";
 
 const Home: NextPage = () => {
   return (
@@ -15,6 +15,13 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <LoginForm />
+        <div className={styles.logoContainer}>
+          <div className={styles.imageContainer}>
+            <Image src={logo} width={104} height={140} alt={"miet vk logo"} />
+          </div>
+
+          <p>Военная кафедра МИЭТ</p>
+        </div>
       </main>
     </div>
   );
