@@ -1,9 +1,12 @@
+import CourseInfo from "@components/student/courseInfo/CourseInfo";
+import Disciplines from "@components/student/disciplines/Disciplines";
 import React from "react";
 
 const index = () => {
   return (
     <div>
-      <div>student</div>
+      <Disciplines />
+      <CourseInfo />
     </div>
   );
 };
