@@ -6,9 +6,11 @@ import styles from "../../styles/Student.module.css";
 
 const index = () => {
   return (
-    <div>
-      <Disciplines />
-      <CourseInfo />
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <Disciplines />
+        <CourseInfo />
+      </div>
     </div>
   );
 };
