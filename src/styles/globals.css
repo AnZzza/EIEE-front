@@ -13,4 +13,9 @@ a {
 
 * {
   box-sizing: border-box;
+  color: rgb(80, 80, 80);
+}
+
+ul {
+  list-style-type: none;
 }
