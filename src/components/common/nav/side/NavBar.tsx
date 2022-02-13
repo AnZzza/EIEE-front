@@ -1,7 +1,7 @@
 import React, { FormEventHandler, SyntheticEvent, useContext } from "react";
 import Link from "next/link";
 import styles from "./NavBar.module.scss";
-import { DISCIPLINE, MATERIALS, SOURCES, LOGIN } from "../../../utils/routes";
+import { LIBRARY, SOURCES, LOGIN, STUDENT } from "../../../../utils/routes";
 
 const NavBar = () => {
   const handleClick = async (e: SyntheticEvent) => {
@@ -10,12 +10,12 @@ const NavBar = () => {
   };
 
   return (
-    <ul className={styles.main}>
+    <ul className={styles.list}>
       <li>
-        <Link href={DISCIPLINE}>обучение</Link>
+        <Link href={STUDENT}>обучение</Link>
       </li>
       <li>
-        <Link href={MATERIALS}>материалы</Link>
+        <Link href={LIBRARY}>библиотека</Link>
       </li>
       <li>
         <Link href={SOURCES}>ссылки</Link>

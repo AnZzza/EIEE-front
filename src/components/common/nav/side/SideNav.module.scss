@@ -1,0 +1,14 @@
+.nav {
+  position: fixed;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  right: 0;
+  bottom: 0;
+  background-color: #288160;
+  height: 100%;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  padding-top: 100px;
+}

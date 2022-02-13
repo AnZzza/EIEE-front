@@ -7,6 +7,8 @@ import { useAppDispatch } from "hooks/redux";
 import { login } from "store/reducers/ActionCreators";
 import { useAppSelector } from "../../hooks/redux";
 import Router from "next/router";
+import router from "next/router";
+import { STUDENT } from "../../utils/routes";
 
 const LoginForm = () => {
   const dispatch = useAppDispatch();
@@ -14,7 +16,7 @@ const LoginForm = () => {
     (state) => state.authReducer
   );
 
-  const [credentials, setCredentials] = useState<ICredentials>({
+  const [credentials, setCredentials] = useState({
     email: "",
     password: "",
   });
@@ -28,7 +30,8 @@ const LoginForm = () => {
 
   const handleSubmit: FormEventHandler<HTMLFormElement> = async (e) => {
     e.preventDefault();
-    dispatch(login(credentials));
+    // dispatch(login(credentials));
+    router.push(STUDENT);
   };
 
   return (

@@ -1,11 +1,12 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/Enter.module.css";
 import LoginForm from "../components/login/LoginForm";
 import logo from "../../public/assets/vkLogo.png";
+import { useFetcBooksQuery } from "store/services/BookService";
 
-const Home: NextPage = () => {
+const Enter: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
@@ -27,4 +28,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default Enter;

@@ -1,28 +1,35 @@
-import React from "react";
+import React, { FC } from "react";
 import styles from "./Disciplines.module.scss";
 
-const Disciplines = () => {
+interface userDisciplines {
+  dList: any[];
+}
+
+const Disciplines: FC<userDisciplines> = ({ dList }) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.head}>
-        <p>Дисциплины</p>
-        <p>балл</p>
-      </div>
-      <ul className={styles.list}>
-        <li>
-          <p>Рлс</p>
-          <div>43</div>
-        </li>
-        <li>
-          <p>Компьютерный практикум Рлс</p>
-          <div>92</div>
-        </li>
-        <li>
-          <p>Теория Рлс</p>
-          <div>78</div>
-        </li>
-      </ul>
-    </div>
+    <table className={styles.table}>
+      <thead>
+        <tr className={styles.head}>
+          <th>Дисциплины</th>
+          <th>
+            <span>балл</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody className={styles.list}>
+        {dList.map((d) => (
+          <tr key={d.name}>
+            <td>{d.name}</td>
+            <td>
+              <span>из 100</span>
+            </td>
+            <td>
+              <span>{d.scores}</span>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
   );
 };
 

@@ -8,7 +8,7 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  /* text-decoration: none; */
 }
 
 * {
@@ -18,4 +18,15 @@ a {
 
 ul {
   list-style-type: none;
+}
+
+:root {
+  --main-green: #2b8a67;
+  --second-green: #288160;
+  --dark-green: #288160;
+}
+
+fieldset {
+  margin: 0;
+  border: none;
 }

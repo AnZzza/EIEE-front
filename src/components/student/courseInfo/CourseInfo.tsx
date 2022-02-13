@@ -5,7 +5,8 @@ const CourseInfo = () => {
   return (
     <div className={styles.box}>
       <b>Направление: </b>
-      Радио войска
+      <br />
+      Радиотехнические войска
       <br />
       <b>Профиль: </b>
       П-35
