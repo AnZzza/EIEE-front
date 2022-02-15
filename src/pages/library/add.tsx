@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 import Layout from "../../components/common/layouts/Layout";
-import LibForm from "../../components/library/form/LibForm";
+import LibForm from "../../components/library/add/form/LibForm";
 
 const Add = () => {
   return (
